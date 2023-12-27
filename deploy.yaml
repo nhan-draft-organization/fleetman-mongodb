@@ -30,7 +30,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongo-pvc
 spec:
-  storageClassName: mylocalstorage
+  storageClassName: hostpath
   accessModes:
     - ReadWriteOnce
   resources:
@@ -43,7 +43,7 @@ kind: PersistentVolume
 metadata:
   name: local-storage
 spec:
-  storageClassName: mylocalstorage
+  storageClassName: hostpath
   capacity:
     storage: 2Gi
   accessModes:
